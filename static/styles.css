@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Makes the body take full viewport height */
+    margin: 0;                /* Removes default margins */
+    flex-direction: column;   /* Stacks elements vertically */
+}
+    
+form input[type = "submit"]{
+    background-color: blue;
+    color: azure;
+    display: flex;
+    margin-left: 80px;  
+    
+}
+
+p{
+    margin-left: 80px;  
+}

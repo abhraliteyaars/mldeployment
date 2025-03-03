@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Please enter values</h1>
+    <form method="GET" action="/predict">
+        <br>
+        <label> Area</label>
+        <input type="text" id="area" name="area" value = "{{ area }}">
+        <br>
+        <br>
+        <label> Bedrooms</label>
+        <input type="text" id="br" name="bedrooms" value = "{{ bedrooms }}">
+        <br>
+        <br>
+        <label> Bathrooms</label>
+        <input type="text" id="btr" name="bathrooms" value = "{{ bathrooms }}">
+        <br>
+        <br>
+        <label>Stories</label>
+        <input type="text" id="str" name="stories" value = "{{ stories }}">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>{{ price }}</p>
+    <a href="/">Reset</a>
+</body>
+</html> 
