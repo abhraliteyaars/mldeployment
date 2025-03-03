@@ -35,7 +35,7 @@ def model_data_api():
     stories = int(data.get('stories'))
     inputs = [[area,bedrooms,bathrooms,stories]]
     price = model.predict(inputs)
-    return jsonify({"predicted_price":price})
+    return jsonify({"predicted_price": float(price[0])})
 
 if __name__ == "__main__":
     app.run(debug=True)
