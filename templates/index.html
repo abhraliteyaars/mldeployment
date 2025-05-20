@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>House Price Prediction</title>
     <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-    <h1>Please enter values</h1>
-    <form method="GET" action="/predict">
-        <br>
-        <label> Area</label>
-        <input type="text" id="area" name="area" value = "{{ area }}">
-        <br>
-        <br>
-        <label> Bedrooms</label>
-        <input type="text" id="br" name="bedrooms" value = "{{ bedrooms }}">
-        <br>
-        <br>
-        <label> Bathrooms</label>
-        <input type="text" id="btr" name="bathrooms" value = "{{ bathrooms }}">
-        <br>
-        <br>
-        <label>Stories</label>
-        <input type="text" id="str" name="stories" value = "{{ stories }}">
-        <br>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-    <p>{{ price }}</p>
-    <a href="/">Reset</a>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form method="get" action="/predict">
+            <div class="form-grid">
+                <label for="area">Area:</label>
+                <input type="number" id="area" name="area" value="{{ area }}" required>
+
+                <label for="bedrooms">Bedrooms:</label>
+                <input type="number" id="bedrooms" name="bedrooms" value="{{ bedrooms }}" required>
+
+                <label for="bathrooms">Bathrooms:</label>
+                <input type="number" id="bathrooms" name="bathrooms" value="{{ bathrooms }}" required>
+
+                <label for="stories">Stories:</label>
+                <input type="number" id="stories" name="stories" value="{{ stories }}" required>
+            </div>
+            <input type="submit" value="Predict Price">
+        </form>
+        {% if price %}
+            <p class="price">The predicted price is: <span>{{ price }}</span></p>
+        {% endif %}
+        <a href="/" class="reset-button">Reset</a>
+    </div>
 </body>
-</html> 
+</html>

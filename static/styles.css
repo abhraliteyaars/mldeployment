@@ -1,19 +1,106 @@
 body {
+    font-family: sans-serif;
+    /*background-color: #f4f4f4;*/
+    margin: 0;
     display: flex;
-    align-items: center;      /* Centers vertically */
-    height: 100vh;            /* Makes the body take full viewport height */
-    margin: 0;                /* Removes default margins */
-    flex-direction: column;   /* Stacks elements vertically */
+    justify-content: flex-end; /* Align to the right */
+    align-items: center; /* Vertically center */
+    min-height: 100vh;
+    background-image: url('bgimg.jpeg'); /* Add the background image */
+    background-size: contain; /* Cover the entire background */
+    background-position: left; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
-    
-form input[type = "submit"]{
-    background-color: blue;
-    color: azure;
-    display: flex;
-    margin-left: 80px;  
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
     
 }
 
-p{
-    margin-left: 80px;  
+form {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns: label and input */
+    gap: 15px;
+    margin-bottom: 15px;
+    text-align: left; /* Align labels to the left */
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #28a745;
+    margin-top: 20px;
+}
+
+.price span {
+    font-weight: bold;
+}
+
+.reset-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #c82333;
+}
+
+/* Basic responsiveness */
+@media (max-width: 500px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: auto; /* Stack labels and inputs on smaller screens */
+    }
 }
