@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     /*background-color: #f4f4f4;*/
     margin: 0;
-    display: flex;
+    display: flex; 
     justify-content: flex-end; /* Align to the right */
     align-items: center; /* Vertically center */
     min-height: 100vh;
@@ -10,6 +10,7 @@ body {
     background-size: contain; /* Cover the entire background */
     background-position: left; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding-right: 10%; /* Add padding to shift content away from the edge */
 }
 
 .container {
@@ -25,19 +26,22 @@ body {
 h1 {
     color: #333;
     margin-bottom: 20px;
-    
 }
 
 form {
     margin-bottom: 20px;
     margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .form-grid {
     display: grid;
     grid-template-columns: auto auto; /* Two columns: label and input */
-    gap: 15px;
+    gap: 35px;
     margin-bottom: 15px;
+    margin-right: 35px;
     text-align: left; /* Align labels to the left */
 }
 
@@ -48,7 +52,7 @@ label {
 
 input[type="number"] {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
@@ -57,9 +61,9 @@ input[type="number"] {
 input[type="submit"] {
     background-color: #007bff;
     color: white;
-    padding: 12px 20px;
+    padding: 20px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
@@ -81,7 +85,7 @@ input[type="submit"]:hover {
 
 .reset-button {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 20px 15px;
     background-color: #dc3545;
     color: white;
     text-decoration: none;
