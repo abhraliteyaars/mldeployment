@@ -32,7 +32,7 @@ def model_data():
     price = model.predict(inputs)
     price_int = int(price[0])
     price_usd = "$ {:,}".format(price_int)
-    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    timestamp = datetime.datetime.now()
     write_data_db(price_int, area, bedrooms, bathrooms, stories,timestamp)
     # print(price_int, area, bedrooms, bathrooms, stories,timestamp)
     return render_template("index.html",price = price_usd,area =area,bedrooms = bedrooms,stories = stories,bathrooms = bathrooms)
